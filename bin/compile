@@ -300,3 +300,8 @@ install_newrelic_userini
 # done with platform installs; restore COMPOSER from previous value
 export COMPOSER="$COMPOSER_bak"
 unset COMPOSER_bak
+
+# reading BEFORE_RELEASE_EXEC from ENV
+if [[ $BEFORE_RELEASE_EXEC ]]; then
+    eval $BEFORE_RELEASE_EXEC
+fi
