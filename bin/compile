@@ -303,5 +303,7 @@ unset COMPOSER_bak
 
 # reading BEFORE_RELEASE_EXEC from ENV
 if [[ $BEFORE_RELEASE_EXEC ]]; then
+    status "Detected \$BEFORE_RELEASE_EXEC variable."
+    status "Executing '$BEFORE_RELEASE_EXEC'"
     eval $BEFORE_RELEASE_EXEC
 fi
